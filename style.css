@@ -1,0 +1,717 @@
+/* التنسيق الأساسي للصفحة */
+.container {
+  max-width: 1500px; /* العرض الذي يناسبك */
+  max-height: 1000px;
+  margin: 0 auto; /* لتوسيط العنصر أفقياً */
+  padding: 0 auto; /* للتحكم في الهوامش الداخلية */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Alexandria', sans-serif;
+  background-color: rgb(215, 214, 216); /* اختر اللون الذي تريده (رمادي فاتح) */
+}
+
+.main-header {
+  position: relative;
+  height: 50%;
+  color: #fff;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.background-image {
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  width: 1500px; /* اختر العرض الذي تريده */
+  height: 500px; /* اختر الارتفاع الذي تريده */
+  object-fit: cover;
+  filter: brightness(0.2);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  direction: rtl;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  direction: rtl;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.logo-container {
+  margin-top: 50px;
+  position: relative;
+}
+
+.logo {
+  width: 200px;
+}
+
+.logo-right {
+  position: absolute;
+  right: 7%;
+  top: -50%;
+  transform: translateY(-50%);
+  width: 150px;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+.content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  top: 25px;
+}
+
+.btn.contact {
+  background-color: #efb43bff;
+  color: #000000;
+}
+.btn.contact:hover {
+  background-color: #a3a3a3;
+}
+
+.btn.whatsapp {
+  background-color: #3d56a4ff;
+  color: #000000;
+}
+.btn.whatsapp:hover {
+  background-color: #a3a3a3;;
+}
+
+/* **************** */
+
+/* تنسيق المستطيلات */
+.features-section {
+  padding: 20px 10px;
+  flex-direction: column;
+  right: 10%;
+  gap: 20px;
+}
+
+.rectangles-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.rectangle {
+  width: 200px;
+  height: 300px;
+  background-color: #352f44;
+  border-radius: 20px;
+}
+
+.description {
+  display: flex;
+  flex-direction: row-reverse; /* يجعل النص على اليمين والصورة على اليسار */
+  align-items: flex-start; /* محاذاة النص والصورة من الأعلى */
+  gap: 20px; /* مسافة بين النص والصورة */
+  margin-top: 75px;
+}
+
+/* **************** */
+
+.description p {
+  font-size: 35px; /* حجم النص */
+  margin-right: 7%;
+  line-height: 1.6; /* ارتفاع السطر */
+  color: #000000; /* لون النص */
+  direction: rtl; /* دعم اللغة العربية */
+  text-align: right; /* محاذاة النص لليمين */
+  font-weight: 100; /* تقليل سماكة النص */
+}
+
+.description img {
+  object-fit: contain; /* للتأكد من عرض الصورة بالكامل */
+  margin-left: 6%; /* يضمن دفع الصورة إلى أقصى اليسار */
+  margin-top: 0; /* التحكم في الهامش العلوي */
+  margin-bottom: 0; /* التحكم في الهامش السفلي */
+  width: 450px; /* عرض الصورة */
+}
+
+/* **************** */
+
+.styled-divider {
+  border: 0;
+  height: 8px;
+  background: linear-gradient(to right, #352f44ff, #9966ffff, #352f44ff); /* تأثير التدرج */
+  margin: 125px 0 30px 0; /* مسافة: (علوي 50px، سفلي 30px) */
+  width: 60%; /* عرض الخط */
+  margin-left: auto;
+  margin-right: auto; /* توسيط الخط */
+  border-radius: 10px; /* زوايا دائرية */
+}
+
+/* **************** */
+
+/* قسم الصورة */
+.new-section {
+  position: relative;
+  display: flex;
+  justify-content: center; /* لتوسيط الصورة أفقياً */
+  margin-top: 50px; /* إضافة مسافة علوية */
+  width: 100%; /* عرض القسم بالكامل */
+  height: auto;
+}
+
+.new-image {
+  width: 1500px; /* عرض الصورة */
+  height: auto; /* الحفاظ على نسبة الأبعاد */
+  filter: brightness(0.2); /* تأثير السطوع */
+  object-fit: cover; /* تغطية الصورة بالكامل */
+  z-index: -1;
+}
+
+/* الطبقة التراكبية */
+.content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* لجعل العناصر تبدأ من الأعلى */
+  padding-top: 20px; /* مسافة علوية داخل الصورة */
+}
+
+/* صندوق العنوان */
+.header-box {
+  background-color: rgba(207, 202, 202, 0.7); /* خلفية داكنة شفافة */
+  padding: 18px 50px;
+  border-radius: 18px; /* زوايا مستديرة */
+  margin-top: 50px;
+  margin-bottom: 50px; /* مسافة بين العنوان والمستطيلات */
+}
+
+.header-box h2 {
+  color: #000000; /* لون النص */
+  font-size: 24px;
+  margin: 0;
+  font-family: 'Alexandria', sans-serif; /* خط العنوان */
+  text-align: center;
+}
+
+/* المستطيلات */
+.work-rectangles {
+  display: flex;
+  gap: 50px; /* مسافة بين المستطيلات */
+}
+
+.rectangle1 {
+  width: 250px;
+  height: 400px;
+  background-color: #352f44;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1.5); /* ظل خفيف */
+  overflow: hidden; /* لإخفاء الأجزاء الزائدة */
+  display: flex;
+  flex-direction: column;
+}
+
+.rectangle-top {
+  flex: 5; /* الجزء العلوي يأخذ جزءًا أكبر */
+  background-color: #352f44; /* لون القسم العلوي */
+}
+
+.rectangle-bottom {
+  flex: 1; /* الجزء السفلي */
+  background-color: #7B6C94; /* لون مختلف للقسم السفلي */
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 100%;
+  margin-top: 50px;
+}
+
+.btn1 {
+  padding: 15px 35px;
+  font-size: 20px;
+  font-family: 'Alexandria', sans-serif; /* خط العنوان */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.previous {
+  background-color: #352f44;
+  color: #fff;
+}
+
+.next {
+  background-color: #352f44;
+  color: #fff;
+}
+
+.btn1:hover {
+  opacity: 0.8;
+  background-color: #7B6C94;
+}
+
+/* **************** */
+
+.styled-divider1 {
+  border: 0;
+  height: 8px;
+  background: linear-gradient(to right, #352f44ff, #9966ffff, #352f44ff); /* تأثير التدرج */
+  margin: 50px 0 30px 0; /* مسافة: (علوي 50px، سفلي 30px) */
+  width: 60%; /* عرض الخط */
+  margin-left: auto;
+  margin-right: auto; /* توسيط الخط */
+  border-radius: 10px; /* زوايا دائرية */
+}
+
+/* **************** */
+
+/* قسم الصورة */
+.new-section2 {
+  position: relative;
+  display: flex;
+  justify-content: center; /* لتوسيط الصورة أفقياً */
+  margin-top: 50px; /* إضافة مسافة علوية */
+  width: 100%; /* عرض القسم بالكامل */
+  height: auto;
+}
+
+.new-image2 {
+  width: 1500px; /* عرض الصورة */
+  height: auto; /* الحفاظ على نسبة الأبعاد */
+  filter: brightness(0.2); /* تأثير السطوع */
+  object-fit: cover; /* تغطية الصورة بالكامل */
+  z-index: -1;
+}
+
+/* الطبقة التراكبية */
+.content-overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* لجعل العناصر تبدأ من الأعلى */
+  padding-top: 20px; /* مسافة علوية داخل الصورة */
+}
+
+/* صندوق العنوان */
+.header-box2 {
+  background-color: rgba(207, 202, 202, 0.7); /* خلفية داكنة شفافة */
+  padding: 18px 50px;
+  border-radius: 18px; /* زوايا مستديرة */
+  margin-top: 50px;
+  margin-bottom: 50px; /* مسافة بين العنوان والمستطيلات */
+}
+
+.header-box2 h2 {
+  color: #000000; /* لون النص */
+  font-size: 24px;
+  margin: 0;
+  font-family: 'Alexandria', sans-serif; /* خط العنوان */
+  text-align: center;
+}
+
+.work-rectangles2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* ثلاثة أعمدة بحجم متساوٍ */
+  gap: 50px; /* مسافة بين المستطيلات */
+  margin: 20px 0; /* مسافة علوية وسفلية */
+}
+
+.rectangle2 {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1.5); /* ظل خفيف */
+  background-color: transparent; /* خلفية شفافة للهيكل العام */
+  position: relative; /* لجعل الأجزاء الداخلية تتداخل */
+  overflow: visible; /* السماح للأجزاء بالامتداد خارج الحاوية */
+  display: flex;
+  flex-direction: column;
+}
+
+/* الجزء العلوي */
+.rectangle-top2 {
+  flex: 4;  /* نسبة أكبر للجزء العلوي */
+  background-color: #352f44;
+  border-radius: 15px;  /* زوايا مستديرة لكل الجوانب */
+  position: relative;
+  top: 12px; /* جعل الجزء العلوي يمتد فوق الجزء السفلي */
+  z-index: 1;
+}
+
+/* الجزء السفلي */
+.rectangle-bottom2 {
+  flex: 1;  /* يأخذ نسبة أقل */
+  background-color: #7B6C94;
+  padding: 15px; /* مسافة داخلية */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 15px;  /* تدوير الزاوية السفلية اليسرى */
+  border-bottom-right-radius: 15px; /* تدوير الزاوية السفلية اليمنى */
+}
+
+/* نص وزر في القسم السفلي */
+.rectangle-bottom2 h3 {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 100;
+  color: #fff;
+}
+
+.rectangle-bottom2 .order-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: rgba(207, 202, 202, 0.904); /* خلفية داكنة شفافة */
+  color: #352f44;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Alexandria', sans-serif; /* خط العنوان */
+}
+
+.rectangle-bottom2 .order-button:hover {
+  background-color: #eceaf0;
+}
+
+.navigation-buttons2 {
+  display: flex;
+  justify-content: center;
+  gap: 100%;
+  margin-top: 50px;
+}
+
+.btn2 {
+  padding: 15px 35px;
+  font-size: 20px;
+  font-family: 'Alexandria', sans-serif; /* خط العنوان */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.order-button i {
+  margin-right: 5px; /* مسافة بين الأيقونة والنص */
+  font-size: 18px;  /* حجم الأيقونة */
+  vertical-align: middle;
+}
+
+.previous2 {
+  background-color: #352f44;
+  color: #fff;
+}
+
+.next2 {
+  background-color: #352f44;
+  color: #fff;
+}
+
+.btn2:hover {
+  opacity: 0.8;
+  background-color: #7B6C94;
+}
+
+/* **************** */
+
+.styled-divider1 {
+  border: 0;
+  height: 8px;
+  background: linear-gradient(to right, #352f44ff, #9966ffff, #352f44ff); /* تأثير التدرج */
+  margin: 50px 0 30px 0; /* مسافة: (علوي 50px، سفلي 30px) */
+  width: 60%; /* عرض الخط */
+  margin-left: auto;
+  margin-right: auto; /* توسيط الخط */
+  border-radius: 10px; /* زوايا دائرية */
+}
+
+/* **************** */
+
+.services-list {
+  margin: 40px 20px; /* مسافة بين المستطيلات وقسم النصوص */
+  padding: 20px; /* مسافة داخلية */
+  background: linear-gradient(to right, #352f44ff, #5d3c9e, #352f44ff); /* تأثير تدرج */
+  border-radius: 15px; /* زوايا مستديرة */
+  box-shadow: 0 4px 8px rgba(218, 8, 8, 0.1); /* ظل خفيف */
+  overflow: hidden; /* منع النص من الخروج خارج الحاوية */
+}
+
+.marquee {
+  white-space: nowrap; /* منع النص من الالتفاف */
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 30s linear infinite; /* حركة النص */
+}
+
+.services-list p {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: continuous-marquee 10s linear infinite; /* حركة نص مستمرة وأبطأ */
+  font-size: 25px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(-100%); } /* يبدأ النص خارج الحاوية من الجهة اليسرى */
+  100% { transform: translateX(100%); } /* ينتهي النص خارج الحاوية من الجهة اليمنى */
+}
+
+/* **************** */
+
+/* تنسيقات الحاوية الرئيسية للميزات */
+.feature-section {
+  display: flex;
+  justify-content: center; /* لضمان التوسيط الأفقي */
+  gap: 20px; /* مسافة بين العناصر */
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+/* تنسيقات كل عنصر داخل قائمة الميزات */
+.feature-item {
+  text-align: center;
+  flex: 1; /* توزيع المساحة بشكل متساوٍ */
+}
+
+/* تنسيقات الصور داخل عناصر الميزات */
+.feature-item img {
+  width: 100px;
+  height: 85px;
+}
+
+/* تنسيقات العناوين */
+.feature-title {
+  font-size: 20px;
+  color: #5d3c9e;
+  margin-top: 12px;
+}
+
+.feature-percentage {
+  margin-top: 12px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #352f44;
+}
+
+.percentage {
+  color: #352f44;
+}
+
+/* تنسيقات قسم التواصل */
+.contact-section {
+  background-color: #3f3c57;
+  width: 35%;
+  margin: 25px auto;  /* توسيط أفقي وترك مسافة عمودية */
+  padding: 50px;
+  border-radius: 35px;
+  text-align: center;
+}
+
+/* تنسيقات النصوص داخل قسم التواصل */
+.contact-message {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* تنسيقات أزرار التواصل */
+.contact-actions {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* تنسيقات الأزرار */
+.contact-button {
+  font-family: 'Alexandria', sans-serif;
+  background-color: #e5e5e5;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* تأثير التمرير على الأزرار */
+.contact-button:hover {
+  background-color: #6d569b;
+}
+
+/* **************** */
+
+/* Footer Styles */
+.footer {
+  background-color: #2e283d; /* اللون الخلفي */
+  color: #c6c2d2; /* لون النص */
+  border-top-left-radius: 50px; /* الحواف الدائرية */
+  border-top-right-radius: 50px;
+  max-width: 1300px; /* تحديد العرض الأقصى للفوتر */
+  margin: 0 auto; /* توسيط الفوتر */
+  padding: 5px 10px 20px 10px; /* (أعلى | يمين | أسفل | يسار) */
+}
+
+/* الحاوية الرئيسية للفوتر */
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* معلومات الاتصال */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* العنصر الواحد في الاتصال */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 25px;
+  flex-direction: row-reverse; /* عكس اتجاه العناصر لجعل الأيقونات على اليمين */
+}
+
+/* الأيقونات */
+.icon {
+  font-size: 35px;
+}
+
+/* حاوية الشعار */
+.logo-container {
+  text-align: center;
+}
+
+/* الشعار */
+.footer-logo {
+  width: 300px; /* العرض تلقائي */
+  height: 300px; /* الحفاظ على نسبة الأبعاد */
+  margin-bottom: 10px;
+}
+
+/* خط الفاصل */
+.footer-divider {
+  border: 0;
+  height: 1px; /* ارتفاع الخط */
+  background: #c6c2d2; /* لون الخط */
+  width: 75%; /* عرض الخط (يمكنك تعديله حسب الحاجة) */
+  margin: 5px auto; /* توسيط الخط داخل الفوتر */
+}
+
+/* حقوق النشر */
+.footer-copyright {
+  text-align: center;
+  font-size: 18px;
+  color: #c6c2d2;
+  font-family: 'Alexandria', sans-serif; /* الخط */
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* **************** */
+
+/* تصميم زر الرجوع للأعلى */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #62567a; /* اللون الخلفي للزر */
+  color: #2e283d; /* لون الأيقونة */
+  border: none;
+  border-radius: 50%; /* جعل الزر دائريًا */
+  display: none; /* إخفاء الزر بشكل افتراضي */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف للزر */
+  font-size: 24px; /* حجم النص داخل الزر */
+}
+
+#backToTop:hover {
+  background-color: #4a4162; /* تغيير اللون عند المرور */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* تعميق الظل عند المرور */
+}
+
+/* تصميم السهم داخل الزر */
+#backToTop .arrow-up {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+#backToTop .arrow-up::before,
+#backToTop .arrow-up::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: #8475a9; /* لون السهم */
+  border-radius: 1px;
+  transform-origin: center;
+}
+
+#backToTop .arrow-up::before {
+  transform: rotate(45deg); /* الجزء الأول من السهم */
+  top: 10px;
+  left: 10px;
+}
+
+#backToTop .arrow-up::after {
+  transform: rotate(-45deg); /* الجزء الثاني من السهم */
+  top: 10px;
+  right: 10px;
+}
+
+/* **************** */
